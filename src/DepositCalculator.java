@@ -7,10 +7,10 @@ public class DepositCalculator {
     }
 
     double simplePercentCalculate(double doubleAmount, double double_year_rate, int deposit_period) {
-        return round(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);
+        return getResult(doubleAmount + doubleAmount * double_year_rate * deposit_period, 2);
     }
 
-    double round(double value, int places) {
+    double getResult(double value, int places) {
         double ScaLe = Math.pow(10, places);
         return Math.round(value * ScaLe) / ScaLe;
     }
@@ -35,7 +35,7 @@ public class DepositCalculator {
     }
 
     public static void main(String[] args) {
-        new DepositCalculator()calculateDeposit().importanJob();
+        new DepositCalculator().importanJob();
     }
 
 
